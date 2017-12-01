@@ -12,7 +12,7 @@ public class Comparators {
 
 	public static void main(String args[]) {
 
-		List employees = new ArrayList<Employee>();
+		List<Employee> employees = new ArrayList<Employee>();
 
 		employees.add(new Employee(35, "Monica", 2000));
 		employees.add(new Employee(366, "Pedro", 1000));
@@ -24,18 +24,18 @@ public class Comparators {
 
 		System.out.println("Lista ordenada de Employees: \n" + employees.toString());
 
-		List programmers = new ArrayList<Programmer>();
+		List<Programmer> programmers = new ArrayList<Programmer>();
 		programmers.add(new Programmer(35, "Monica", 35));
 		programmers.add(new Programmer(366, "Pedro", 30));
 		programmers.add(new Programmer(232, "Silvia", 55));
 
-		System.out.println("Lista sin ordenar de programmers: \n" + programmers.toString());
+		System.out.println("Lista sin ordenar de programmers por edad: \n" + programmers.toString());
 
 		Collections.sort(programmers, new ProgrammerComparator());
 
-		System.out.println("Lista ordenada de programmers: \n" + programmers.toString());
+		System.out.println("Lista ordenada de programmers por edad: \n" + programmers.toString());
 
-		List managers = new ArrayList<Manager>();
+		List<Manager> managers = new ArrayList<Manager>();
 		managers.add(new Manager(35, "Monica", 2000, 35));
 		managers.add(new Manager(366, "Pedro", 3000, 44));
 		managers.add(new Manager(232, "Silvia", 1500, 40));
@@ -44,12 +44,13 @@ public class Comparators {
 
 		Collections.sort(managers, new SortManagById());
 
-		System.out.println("Lista ordenada por Wage: \n" + managers.toString());
+		System.out.println("Lista ordenada por Id: \n" + managers.toString());
 
 		Collections.sort(managers, new SortManagByWage());
 
 		System.out.println("Lista ordenada por Wage: \n" + managers.toString());
-		List person = new ArrayList<Person>();
+		
+		List<Person> person = new ArrayList<Person>();
 		person.add(new Programmer(300, "Pedro", 20));
 		person.add(new Manager(354, "Monica", 2000, 35));
 		person.add(new Programmer(355,"Silvia", 50));

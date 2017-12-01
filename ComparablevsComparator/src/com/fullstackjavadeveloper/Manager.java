@@ -20,6 +20,6 @@ public class Manager implements Person {
 
 	public int getAge() {
 		return this.age;
-	};
+	}
 
 }

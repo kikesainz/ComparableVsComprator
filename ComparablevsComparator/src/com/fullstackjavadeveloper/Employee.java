@@ -19,7 +19,7 @@ public class Employee implements Comparable <Employee>{
 
 	public int compareTo(Employee emp) {
 		// TODO Auto-generated method stub
-		return    emp.id - this.id;
+		return    this.id - emp.id;
 	}
 
 }
